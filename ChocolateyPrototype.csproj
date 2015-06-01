@@ -126,6 +126,7 @@
         $content = (get-content -raw $filepath ) 
         $content = $content -replace "\s+version='.*'","    version='$v'"
         $content = $content -replace "uniqueId='.*'","uniqueId='chocolateyprototype.$v'"
+        $content = $content -replace "providerversion='.*'","providerVersion='$v'"
         $content = $content -replace "providerVersion='.*'","providerVersion='$v'"
         $content = $content -replace "href='.*'","href='https://oneget.org/ChocolateyPrototype-$v.exe'"
         set-content $filepath $content
@@ -154,6 +155,7 @@
       $newver = "version='$version'"
       
       $newContent = (get-content -raw $manifestfile ) -replace "version='.*'",$newver
+      $newContent = $newContent -replace "providerversion","providerVersion"
       $newContent = $newContent.Trim();
       set-content $manifestfile $newcontent 
       
