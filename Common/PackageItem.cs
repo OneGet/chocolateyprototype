@@ -12,7 +12,7 @@
 //  limitations under the License.
 //  
 
-namespace Microsoft.PackageManagement.NuGetProvider.Common {
+namespace Microsoft.PackageManagement.ChocolateyPrototype.Common {
     using System;
     using System.IO;
     using NuGet;
@@ -114,7 +114,7 @@ namespace Microsoft.PackageManagement.NuGetProvider.Common {
             }
         }
 
-        internal string GetCanonicalId(CommonRequest request) {
+        internal string GetCanonicalId(ChocolateyRequest request) {
             return _canonicalId ?? (_canonicalId = request.ProviderServices.GetCanonicalPackageId(request.PackageProviderName, Id, Version, PackageSource == null ? null : PackageSource.Location));
         }
     }

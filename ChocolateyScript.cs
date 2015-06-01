@@ -12,7 +12,7 @@
 //  limitations under the License.
 //  
 
-namespace Microsoft.PackageManagement.NuGetProvider.Chocolatey {
+namespace Microsoft.PackageManagement.ChocolateyPrototype {
     public static class ChocolateyScript {
 #if FALSE
     /// <summary>
@@ -29,12 +29,12 @@ namespace Microsoft.PackageManagement.NuGetProvider.Chocolatey {
             // set up the server IPC channel
             var serverChannel = new IpcServerChannel(guid.ToString());
             ChannelServices.RegisterChannel(serverChannel, true);
-            // RemotingConfiguration.RegisterWellKnownServiceType( typeof(CommonRequest), "Request", WellKnownObjectMode.Singleton);
+            // RemotingConfiguration.RegisterWellKnownServiceType( typeof(ChocolateyRequest), "Request", WellKnownObjectMode.Singleton);
             var objRef = RemotingServices.Marshal(_request);
 
             // Create the client elevated
             var process = AsyncProcess.Start(new ProcessStartInfo {
-                FileName = CommonRequest.NuGetExePath,
+                FileName = ChocolateyRequest.NuGetExePath,
                 Arguments = string.Format("-rpc {0}", objRef.URI),
                 // WorkingDirectory = workingDirectory,
                 WindowStyle = ProcessWindowStyle.Hidden,

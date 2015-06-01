@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Microsoft.PackageManagement.NuGetProvider.Resources {
+namespace Microsoft.PackageManagement.ChocolateyPrototype.Resources {
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>

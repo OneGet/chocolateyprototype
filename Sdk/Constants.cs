@@ -12,7 +12,7 @@
 //  limitations under the License.
 //  
 
-namespace Microsoft.PackageManagement.NuGetProvider.Sdk {
+namespace Microsoft.PackageManagement.ChocolateyPrototype.Sdk {
     public static partial class Constants {
         #region copy common-constants-implementation /internal/public
 
@@ -55,6 +55,7 @@ namespace Microsoft.PackageManagement.NuGetProvider.Sdk {
             public const string UnableToOverwriteExistingFile = "MSG:UnableToOverwriteExistingFile";
             public const string UnableToRemoveFile = "MSG:UnableToRemoveFile";
             public const string UnableToResolvePackage = "MSG:UnableToResolvePackage";
+            public const string InvalidVersionRange = "MSG:InvalidVersionRange";
             public const string UnableToResolveSource = "MSG:UnableToResolveSource_NameOrLocation";
             public const string UnableToUninstallPackage = "MSG:UnableToUninstallPackage";
             public const string UnknownFolderId = "MSG:UnknownFolderId";

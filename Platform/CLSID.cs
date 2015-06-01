@@ -12,7 +12,7 @@
 //  limitations under the License.
 //  
 
-namespace Microsoft.PackageManagement.Utility.Platform {
+namespace Microsoft.PackageManagement.ChocolateyPrototype.Platform {
     internal static class Clsid {
         public const string ShellLink = "00021401-0000-0000-C000-000000000046";
     }

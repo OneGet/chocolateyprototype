@@ -12,7 +12,7 @@
 //  limitations under the License.
 //  
 
-namespace Microsoft.PackageManagement.Utility.Platform {
+namespace Microsoft.PackageManagement.ChocolateyPrototype.Platform {
     using System;
     using System.IO;
     using System.Runtime.InteropServices;
@@ -90,7 +90,7 @@ namespace Microsoft.PackageManagement.Utility.Platform {
             GC.SuppressFinalize(this);
         }
 
-        public virtual void Dispose(bool disposing) {
+        public void Dispose(bool disposing) {
             if (disposing) {
                 if (_shellLink != null) {
                     Marshal.ReleaseComObject(_shellLink);

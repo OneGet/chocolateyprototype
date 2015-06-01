@@ -12,7 +12,7 @@
 //  limitations under the License.
 //  
 
-namespace Microsoft.PackageManagement.Utility.Platform {
+namespace Microsoft.PackageManagement.ChocolateyPrototype.Platform {
     using System;
     using System.Runtime.InteropServices;
     using System.Security;

@@ -12,20 +12,19 @@
 //  limitations under the License.
 //  
 
-namespace Microsoft.PackageManagement.NuGetProvider.Chocolatey {
+namespace Microsoft.PackageManagement.ChocolateyPrototype {
     using System;
     using System.Collections.Generic;
     using System.Diagnostics.CodeAnalysis;
     using System.IO;
     using System.Linq;
-    using Common;
 
     public class Snapshot {
         private Dictionary<string, FileInfo> _files;
-        private CommonRequest _request;
+        private ChocolateyRequest _request;
 
         [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "Required.")]
-        internal Snapshot(CommonRequest request, string folder) {
+        internal Snapshot(ChocolateyRequest request, string folder) {
             _request = request;
             Folder = folder;
             _request.Verbose("Taking Snapshot", folder);

@@ -12,14 +12,14 @@
 //  limitations under the License.
 //  
 
-namespace Microsoft.PackageManagement.Utility.Platform {
+namespace Microsoft.PackageManagement.ChocolateyPrototype.Platform {
     using System;
     using System.Collections;
     using System.IO;
     using System.Linq;
     using System.Runtime.InteropServices;
     using System.Text;
-    using NuGetProvider.Common;
+    using Common;
 
     public static class ShellApplication {
         private static readonly string _pin;

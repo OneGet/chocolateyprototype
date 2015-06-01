@@ -12,7 +12,7 @@
 //  limitations under the License.
 //  
 
-namespace Microsoft.PackageManagement.NuGetProvider.Common {
+namespace Microsoft.PackageManagement.ChocolateyPrototype.Common {
     using System;
     using System.IO;
     using NuGet;
@@ -64,6 +64,19 @@ namespace Microsoft.PackageManagement.NuGetProvider.Common {
             get {
                 return Location.ToBase64();
             }
+        }
+
+        public override bool Equals(Object obj) {
+            PackageSource packageSource = obj as PackageSource;
+            if (packageSource == null) {
+                return false;
+            } else {
+                return ((Name.Equals(packageSource.Name) && Location.Equals(packageSource.Location)));
+            }
+        }
+
+        public override int GetHashCode() {
+            return ((Name ?? String.Empty) + (Location ?? String.Empty)).GetHashCode();
         }
     }
 }

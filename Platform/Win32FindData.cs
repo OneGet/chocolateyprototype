@@ -12,7 +12,7 @@
 //  limitations under the License.
 //  
 
-namespace Microsoft.PackageManagement.Utility.Platform {
+namespace Microsoft.PackageManagement.ChocolateyPrototype.Platform {
     using System.IO;
     using System.Runtime.InteropServices;
     using FILETIME = System.Runtime.InteropServices.ComTypes.FILETIME;

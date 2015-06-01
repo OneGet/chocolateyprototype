@@ -12,7 +12,7 @@
 //  limitations under the License.
 //  
 
-namespace Microsoft.PackageManagement.NuGetProvider.Sdk {
+namespace Microsoft.PackageManagement.ChocolateyPrototype.Sdk {
     using System;
     using System.Collections.Generic;
     using System.Globalization;

@@ -12,7 +12,7 @@
 //  limitations under the License.
 //  
 
-namespace Microsoft.PackageManagement.NuGetProvider.Common {
+namespace Microsoft.PackageManagement.ChocolateyPrototype.Common {
     using System;
     using System.Collections.Generic;
     using System.Diagnostics;
@@ -128,7 +128,7 @@ namespace Microsoft.PackageManagement.NuGetProvider.Common {
             }
         }
 
-        public static void Dump(this Exception e, CommonRequest request) {
+        public static void Dump(this Exception e, ChocolateyRequest request) {
             var text = string.Format("{0}//{1}/{2}\r\n{3}", AppDomain.CurrentDomain.FriendlyName, e.GetType().Name, e.Message, e.StackTrace);
             request.Verbose("Exception : {0}", text);
         }
@@ -343,6 +343,20 @@ namespace Microsoft.PackageManagement.NuGetProvider.Common {
                 }
             }
             return;
+        }
+
+        /// <summary>
+        ///     Returns a ReEnumerable wrapper around the collection which timidly (cautiously) pulls items
+        ///     but still allows you to to re-enumerate without re-running the query.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="collection"></param>
+        /// <returns></returns>
+        public static MutableEnumerable<T> ReEnumerable<T>(this IEnumerable<T> collection) {
+            if (collection == null) {
+                return new ReEnumerable<T>(Enumerable.Empty<T>());
+            }
+            return collection as MutableEnumerable<T> ?? new ReEnumerable<T>(collection);
         }
 
         /// <summary>

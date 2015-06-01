@@ -12,7 +12,7 @@
 //  limitations under the License.
 //  
 
-namespace Microsoft.PackageManagement.NuGetProvider.Common {
+namespace Microsoft.PackageManagement.ChocolateyPrototype.Common {
     using System;
     using System.Diagnostics.CodeAnalysis;
     using System.Runtime.InteropServices;

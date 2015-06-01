@@ -12,7 +12,7 @@
 //  limitations under the License.
 //  
 
-namespace Microsoft.PackageManagement.NuGetProvider.Common {
+namespace Microsoft.PackageManagement.ChocolateyPrototype.Common {
     using System;
     using System.Collections;
     using System.Collections.Concurrent;
@@ -420,7 +420,7 @@ namespace Microsoft.PackageManagement.NuGetProvider.Common {
             return _process.CloseMainWindow();
         }
 
-        protected virtual void Dispose(bool disposing) {
+        protected void Dispose(bool disposing) {
             if (disposing) {
                 if (_process != null) {
                     if (!_process.HasExited) {
